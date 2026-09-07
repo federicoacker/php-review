@@ -1,0 +1,18 @@
+header{
+    background-color:#05131E;
+    min-height:5%;
+    width: 100%;
+    color: white;
+    padding: 1em 2em;
+    text-align:center;
+}
+.wrapper{
+    min-height:100vh;
+    background-color: #1D2D3C;
+}
+
+.disk-card{
+    background-color: #05131E !important;
+    color: white;
+    min-height: 480px;
+}

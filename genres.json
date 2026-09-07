@@ -1,0 +1,22 @@
+[
+    {
+        "id":0,
+        "name":"Evil",
+        "short_description":"Film malvagi"
+    },
+    {
+        "id":1,
+        "name":"Drama",
+        "short_description":"Film drammatici"
+    },
+    {
+        "id":2,
+        "name":"Comic",
+        "short_description":"Film tratto da fumetti"
+    },
+    {
+        "id":3,
+        "name":"Action",
+        "short_description":"Film d'azione"
+    }
+]
