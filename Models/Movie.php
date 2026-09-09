@@ -5,6 +5,8 @@ class Movie implements \JsonSerializable {
     public string $year;
     public array $genres;
 
+    public static int $number_of_movies = 0;
+
     use CoverImage;
 
     public function __construct(string $title, string $short_description, string $year, Genre ...$genres){
@@ -12,6 +14,7 @@ class Movie implements \JsonSerializable {
         $this->short_description = $short_description;
         $this->year = $year;
         $this->genres = $genres;
+        self::$number_of_movies++;
     }
 
     public function getGenreString():string{
