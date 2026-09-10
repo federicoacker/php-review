@@ -15,6 +15,20 @@ function createGenres()
     return $genres;
 }
 
+function findGenres(array $genres)
+{
+    $real_genres = createGenres();
+    $found_genres = [];
+    foreach ($real_genres as $real_genre) {
+        foreach ($genres as $genre) {
+            if (strtolower($genre["name"]) == strtolower($real_genre->getName())) {
+                $found_genres[] = $real_genre;
+            }
+        }
+    }
+    return $found_genres;
+}
+
 function associateGenres()
 {
     $genres = createGenres();
@@ -30,18 +44,7 @@ function associateGenres()
 
     return $associatedGenres;
 }
-function findGenres(array $genres){
-    $real_genres = createGenres();
-    $found_genres = [];
-    foreach($real_genres as $real_genre){
-        foreach($genres as $genre){
-            if(strtolower($genre["name"]) == strtolower($real_genre -> getName())){
-                $found_genres[] = $real_genre;
-            }
-        }
-    }
-    return $found_genres;
-}
+
 function read_movies()
 {
     $json_text = file_get_contents("./movies.json");
